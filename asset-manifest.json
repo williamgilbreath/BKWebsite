@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/BKWebsite/static/css/main.a617e044.chunk.css",
+    "main.js": "/BKWebsite/static/js/main.c02ddcd2.chunk.js",
+    "main.js.map": "/BKWebsite/static/js/main.c02ddcd2.chunk.js.map",
+    "runtime-main.js": "/BKWebsite/static/js/runtime-main.523a86ac.js",
+    "runtime-main.js.map": "/BKWebsite/static/js/runtime-main.523a86ac.js.map",
+    "static/js/2.2f4ca771.chunk.js": "/BKWebsite/static/js/2.2f4ca771.chunk.js",
+    "static/js/2.2f4ca771.chunk.js.map": "/BKWebsite/static/js/2.2f4ca771.chunk.js.map",
+    "static/js/3.638bb059.chunk.js": "/BKWebsite/static/js/3.638bb059.chunk.js",
+    "static/js/3.638bb059.chunk.js.map": "/BKWebsite/static/js/3.638bb059.chunk.js.map",
+    "index.html": "/BKWebsite/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/BKWebsite/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.2f4ca771.chunk.js.LICENSE.txt": "/BKWebsite/static/js/2.2f4ca771.chunk.js.LICENSE.txt",
+    "static/media/Logo.afbe2f86.png": "/BKWebsite/static/media/Logo.afbe2f86.png",
+    "static/media/backgroundImage.4b6de17f.jpg": "/BKWebsite/static/media/backgroundImage.4b6de17f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.523a86ac.js",
+    "static/js/2.2f4ca771.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.c02ddcd2.chunk.js"
+  ]
+}
