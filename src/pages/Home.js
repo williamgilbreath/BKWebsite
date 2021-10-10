@@ -7,10 +7,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import background from '../images/backgroundImage.jpg'
 import Button from "@material-ui/core/Button";
 import logo from '../images/Logo.png'
+import SimpleImageSlider from "react-simple-image-slider";
+import frontStore from '../images/FrontStore.jpeg'
+import storeHours from '../images/StoreHours.jpg'
+import truck from '../images/Truck.jpg'
+import worker from '../images/Worker.jpg'
 
 const useStyles = makeStyles({
     headerContainer: {
-        position: 'absolute',
+        //position: 'absolute',
         width: '100vw',
         height: '50vh',
         mixBlendMode: 'darken',
@@ -22,22 +27,23 @@ const useStyles = makeStyles({
     },
     gridContainer: {
         color: 'white',
-        marginTop: '20px'
     },
     logo: {
-        width: '60px',
+        width: '50px',
         marginRight: '10px'
     },
     links: {
         margin: '0 0 0 7vw',
-        fontSize: '24px',
+        fontSize: '18px',
         lineHeight: '30px',
         letterSpacing: '0.1em',
-        fontFamily: 'Quicksand'
+        fontFamily: 'Quicksand',
+        color: 'white'
     },
     link: {
         marginLeft: '5px',
         marginRight: '5px',
+        color: 'white'
     },
     icons: {
         margin: '0 7vw 0 0',
@@ -50,8 +56,8 @@ const useStyles = makeStyles({
         textAlign: 'left',
         color: 'white',
         marginLeft: '7vw',
-        fontSize: '64px',
-        marginTop: '10vh',
+        fontSize: '48px',
+        marginTop: '5vh',
         letterSpacing: '0.1em',
         fontWeight: '700'
     },
@@ -62,7 +68,7 @@ const useStyles = makeStyles({
         background: 'linear-gradient(90deg, #E43A15 0%, #E65245 100%)',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         borderRadius: '50px',
-        height: '70px',
+        height: '60px',
     },
     buttonText: {
         color: 'white',
@@ -74,9 +80,9 @@ const useStyles = makeStyles({
     },
     contactInfo:{
         color: 'white',
-        marginLeft: '7vw',
         fontSize: '24px',
-        marginTop: '20px'
+        marginTop: '20px',
+        paddingLeft: '5.5em'
     },
     phoneEmailTag: {
         marginRight: '5px'
@@ -84,7 +90,27 @@ const useStyles = makeStyles({
     dividerTag: {
         margin: '0 10px'
     },
+    galleryContainer: {
+        height: '35vh',
+        width: '450px'
+    },
+    galleryHeader: {
+        fontSize: '36px',
+        fontWeight: '700'
+    },
+    footer: {
+        height: '15vh',
+        backgroundColor: '#3D3D3D',
+        position: 'absolute'
+    },
 });
+
+const images = [
+    {url: `${frontStore}`},
+    {url: `${storeHours}`},
+    {url: `${truck}`},
+    {url: `${worker}`}
+]
 
 const Home = () => {
     const classes = useStyles();
@@ -94,18 +120,18 @@ const Home = () => {
                 <Grid container item xs direction="row" justifyContent="center" alignItems="center" className={classes.gridContainer}>
                     <Grid item xs container direction="row" justifyContent="flex-start" alignItems="center" className={classes.links}>
                         <img src={logo} className={classes.logo}/>
-                        <a className={classes.link}>Home</a>
+                        <Button className={classes.link}>Home</Button>
                         <p>|</p>
-                        <a className={classes.link}>About</a>
+                        <Button className={classes.link}>About</Button>
                         <p>|</p>
-                        <a className={classes.link}>For Sale</a>
+                        <Button className={classes.link}>For Sale</Button>
                         <p>|</p>
-                        <a className={classes.link}>Contact</a>
+                        <Button className={classes.link}>Contact</Button>
                     </Grid>
                     <Grid item xs container direction="row" justifyContent="flex-end" alignItems="center" className={classes.icons}>
-                        <FacebookRoundedIcon sx={{ fontSize: 51 }} className={classes.icon}/>
-                        <PhoneIphoneRoundedIcon sx={{ fontSize: 51 }} className={classes.icon}/>
-                        <AlternateEmailRoundedIcon sx={{ fontSize: 51 }} className={classes.icon}/>
+                        <FacebookRoundedIcon sx={{ fontSize: 40 }} className={classes.icon}/>
+                        <PhoneIphoneRoundedIcon sx={{ fontSize: 40 }} className={classes.icon}/>
+                        <AlternateEmailRoundedIcon sx={{ fontSize: 40 }} className={classes.icon}/>
                     </Grid>
                 </Grid>
                 <Grid container direction="column" justifyContent="flex-start">
@@ -124,8 +150,22 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </div>
-            <div> {/*gallery div*/}
-
+            <Grid container direction='column' justifyContent="center" alignItems="center" className={classes.galleryContainer}>
+                <Grid item xs container direction='row' justifyContent="flex-start">
+                <h1 className={classes.galleryHeader}>Gallery</h1>
+                </Grid>
+                <Grid item xs>
+                    <SimpleImageSlider
+                        width={845}
+                        height={450}
+                        images={images}
+                        showNavs={true}
+                        showBullets={true}
+                    />
+                </Grid>
+            </Grid>
+            <div className={classes.footer}>
+                <p/>
             </div>
         </div>
     )
