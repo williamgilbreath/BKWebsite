@@ -68,7 +68,8 @@ const useStyles = makeStyles({
         background: 'linear-gradient(90deg, #E43A15 0%, #E65245 100%)',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         borderRadius: '50px',
-        height: '60px',
+        padding: '1em',
+        //height: '60px',
     },
     buttonText: {
         color: 'white',
@@ -76,11 +77,11 @@ const useStyles = makeStyles({
         fontWeight: 'bold',
         lineHeight: '28px',
         letterSpacing: '0.1em',
-        fontSize: '20px'
+        fontSize: '16px'
     },
     contactInfo:{
         color: 'white',
-        fontSize: '24px',
+        fontSize: '18px',
         marginTop: '20px',
         paddingLeft: '5.5em'
     },
@@ -91,17 +92,17 @@ const useStyles = makeStyles({
         margin: '0 10px'
     },
     galleryContainer: {
-        height: '35vh',
-        width: '450px'
+        //padding: '0 9em'
     },
     galleryHeader: {
         fontSize: '36px',
-        fontWeight: '700'
+        fontWeight: '700',
+        width: '845px',
+        textAlign: 'left'
     },
     footer: {
         height: '15vh',
         backgroundColor: '#3D3D3D',
-        position: 'absolute'
     },
 });
 
@@ -151,13 +152,11 @@ const Home = () => {
                 </Grid>
             </div>
             <Grid container direction='column' justifyContent="center" alignItems="center" className={classes.galleryContainer}>
-                <Grid item xs container direction='row' justifyContent="flex-start">
                 <h1 className={classes.galleryHeader}>Gallery</h1>
-                </Grid>
                 <Grid item xs>
                     <SimpleImageSlider
                         width={845}
-                        height={450}
+                        height={391}
                         images={images}
                         showNavs={true}
                         showBullets={true}
